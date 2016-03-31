@@ -82,6 +82,9 @@ THE SOFTWARE.
     #if defined(CORE_TEENSY) && defined(__MK20DX256__)
         #include <i2c_t3.h>
         #define BUFFER_LENGTH 32
+    #elif defined(ARDUINO_ARCH_NRF51822)
+        #include <Wire.h>
+        #define BUFFER_LENGTH 32
     #elif I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
         #include <Wire.h>
     #endif
